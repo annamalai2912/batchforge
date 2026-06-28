@@ -2,7 +2,7 @@
 
 **The Ultimate Windows Automation & Batch Script Manager**
 
-![BatchForge Banner](landing_page/logo.png)
+![BatchForge Banner](https://raw.githubusercontent.com/annamalai2912/batchforge/main/landing_page/logo.png)
 
 BatchForge is a powerful, lightweight Windows desktop application built with Python and PyQt6. It provides a centralized hub to write, organize, and safely execute your automation tasks. Whether you're a sysadmin, a developer, or just someone looking to automate daily PC tasks, BatchForge brings a modern UI/UX to classic Windows batch automation.
 
@@ -22,19 +22,14 @@ BatchForge is a powerful, lightweight Windows desktop application built with Pyt
 
 ## 📸 Screenshots
 
-*(Note: Create a `screenshots` folder in your repository and replace these placeholder paths with your actual screenshot images once uploaded!)*
-
 ### The Script Library & Editor
-![Script Library & Editor](screenshots/editor_view.png)
+![Script Library & Editor](https://raw.githubusercontent.com/annamalai2912/batchforge/main/screenshots/home.png)
 *Browse your categorized scripts and edit them with syntax highlighting.*
 
-### The Execution Engine
-![Execution Engine](screenshots/execution_output.png)
-*Run scripts safely in real-time and view output directly in the console.*
+### Collection Browser
+![Collection Browser](https://raw.githubusercontent.com/annamalai2912/batchforge/main/screenshots/browser.png)
+*Built-in script browser to access all the features of the application.*
 
-### Interactive Tour Guide
-![Interactive Tour](screenshots/tour_guide.png)
-*The first-run wizard welcoming you to BatchForge.*
 
 ---
 
