@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatchForge - The Ultimate Windows Automation Manager</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --primary-blue: #2f81f7;
+            --primary-green: #238636;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at top, rgba(47, 129, 247, 0.1), transparent 50%);
+        }
+
+        .logo-container img {
+            width: 150px;
+            border-radius: 20%;
+            box-shadow: 0 0 40px rgba(47, 129, 247, 0.3);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 0;
+            background: -webkit-linear-gradient(45deg, var(--primary-blue), var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .built-by {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        /* Buttons */
+        .cta-group {
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: white;
+            box-shadow: 0 0 20px rgba(35, 134, 54, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #2ea043;
+            box-shadow: 0 0 30px rgba(35, 134, 54, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--text-muted);
+            margin-left: 20px;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin-top: 0;
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        /* Terminal Preview */
+        .terminal {
+            background: #000;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--primary-green);
+            margin: 60px auto;
+            max-width: 800px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #30363d;
+            color: var(--text-muted);
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <!-- Pointing to the local logo image -->
+                <img src="logo.png" alt="BatchForge Logo">
+            </div>
+            <h1>BatchForge</h1>
+            <p class="subtitle">The Ultimate Windows Automation & Batch Script Manager. Organize, Edit, and Execute with confidence.</p>
+            <p class="built-by">Built by Annamalai K M</p>
+            
+            <div class="cta-group">
+                <!-- Replace href with your actual download link -->
+                <a href="https://github.com/YourUsername/BatchForge/releases/latest/download/BatchForge_Setup.exe" class="btn btn-primary">Download for Windows</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="dot dot-red"></div>
+                <div class="dot dot-yellow"></div>
+                <div class="dot dot-green"></div>
+            </div>
+            <div>> Initializing BatchForge v1.0.0...</div>
+            <div>> Loading script library... [OK]</div>
+            <div>> Categorizing 30+ built-in automation tools... [OK]</div>
+            <div>> Ready. Type a command or select a script to execute.</div>
+            <div style="color: var(--primary-blue);">_</div>
+        </div>
+    </div>
+
+    <section id="features" class="features container">
+        <h2 class="section-title">Why BatchForge?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Categorized Library</h3>
+                <p>No more digging through folders. Group your scripts into beautifully organized categories with our built-in tree view.</p>
+            </div>
+            <div class="card">
+                <h3>Safe Execution</h3>
+                <p>Run scripts asynchronously without freezing the UI. Our robust process-tree termination ensures you can safely halt any runaway script instantly.</p>
+            </div>
+            <div class="card">
+                <h3>Built-in Collection Browser</h3>
+                <p>Comes pre-loaded with over 30 safe, highly practical batch scripts for Productivity, Security, and System Management. Preview and add them with one click.</p>
+            </div>
+            <div class="card">
+                <h3>Syntax Highlighting</h3>
+                <p>A built-in editor featuring custom CMD/Batch syntax highlighting so you can easily review, write, and tweak your automations on the fly.</p>
+            </div>
+            <div class="card">
+                <h3>Scheduled Tasks</h3>
+                <p>Seamlessly integrated with Windows Task Scheduler. Automate your daily backups or system cleanups directly from the UI.</p>
+            </div>
+            <div class="card">
+                <h3>Portable & Lightweight</h3>
+                <p>Powered by Python and SQLite, packaged cleanly into a single Windows installer. Your library and settings travel with you.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container" style="padding: 80px 0;">
+        <h2 class="section-title">The Story Behind BatchForge</h2>
+        <div style="background: var(--bg-card); padding: 40px; border-radius: 12px; border: 1px solid #30363d;">
+            <h3 style="color: var(--primary-blue);">Why I Built This</h3>
+            <p>As a developer and sysadmin, I constantly found myself hunting down loose <code>.bat</code> and <code>.cmd</code> scripts scattered across my desktop, documents, and random folders. Running them felt risky, and managing them was a nightmare. I needed a centralized, safe, and organized hub.</p>
+            <p>I built <strong>BatchForge</strong> to solve this exact problem. It's more than just a library; it's a dedicated workspace where you can write, review, categorize, and safely execute automation tasks without the fear of a runaway script freezing your system. Every line of code was crafted with the goal of bringing modern UI/UX to classic Windows automation.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="container" style="padding: 40px 0 80px 0; text-align: center;">
+        <h2 class="section-title">Get in Touch</h2>
+        <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 30px auto;">Have questions, feature requests, or just want to say hi? I'd love to hear from you.</p>
+        <a href="mailto:contact@example.com" class="btn btn-primary">Contact Annamalai</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BatchForge. Built by Annamalai K M. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

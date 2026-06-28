@@ -1,0 +1,23 @@
+🚀 **I’m thrilled to announce the launch of BatchForge!** 🚀
+
+As a developer, I was tired of hunting down loose `.bat` and `.cmd` scripts scattered across my system. So, I built a solution: **BatchForge** — the ultimate Windows Desktop Automation Manager.
+
+Built entirely from scratch, BatchForge gives you a centralized hub to write, organize, and safely execute your automation tasks. 
+
+**Key Features I'm proud of:**
+📂 **Categorized Library** – Instantly organize your scripts into a beautiful, searchable tree structure.
+🛑 **Safe Execution Engine** – Run scripts asynchronously with real-time output. If a script runs out of control, our complete process-tree termination halts it safely.
+🎨 **Syntax Highlighting** – A custom built-in editor specifically tuned for Windows Batch commands.
+⏱️ **Task Scheduling** – Seamlessly bridges into the Windows Task Scheduler to automate backups and cleanups with zero friction.
+🛒 **Built-In Script Collection** – Comes pre-loaded with over 30 incredibly useful, safe scripts ranging from system diagnostics to auto-extractors and focus modes. 
+
+This project challenged me to dive deep into PyQt6, SQLite, asynchronous threading, and PyInstaller packaging. I’ve even built a custom setup wizard using NSIS!
+
+Whether you are a sysadmin, a developer, or just someone looking to automate your daily PC tasks, I’d love for you to try it out. 
+
+👉 **Check out the landing page and download the installer here:** [Insert Your Landing Page Link]
+👉 **Source Code / GitHub Release:** [Insert Your GitHub Link]
+
+I'm incredibly proud of how this turned out. Let me know what you think in the comments! 
+
+#Python #PyQt6 #Automation #WindowsDev #SoftwareEngineering #BatchForge #Productivity #SysAdmin #OpenSource

@@ -1,0 +1,12 @@
+venv/
+build/
+dist/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+batchforge.db
+*.exe
+err.log
+nsis-3.08/
+*.spec

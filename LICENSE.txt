@@ -1,0 +1,18 @@
+BatchForge - End User License Agreement (EULA)
+
+Built by Annamalai K M
+
+1. ACCEPTANCE OF TERMS
+By installing and using BatchForge, you agree to be bound by the terms of this agreement. If you do not agree to the terms of this agreement, do not install or use the software.
+
+2. LICENSE GRANT
+BatchForge is provided as a free tool for managing and executing batch scripts. You are granted a non-exclusive, non-transferable license to use the software for personal or commercial purposes.
+
+3. DISCLAIMER OF WARRANTY
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+4. USER RESPONSIBILITY
+Batch scripts can execute powerful system commands. The author (Annamalai K M) is not responsible for any damage, data loss, or system instability caused by scripts executed through this application. You are solely responsible for reviewing and understanding any scripts before running them.
+
+5. DISTRIBUTION
+You may not sell this software. You may distribute it freely provided this license agreement remains intact.
