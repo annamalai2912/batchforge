@@ -37,6 +37,9 @@ BatchForge is a powerful, lightweight Windows desktop application built with Pyt
 
 1. **Download the Installer:**
    Navigate to the [Releases](https://github.com/annamalai2912/BatchForge/releases/latest) page and download `BatchForge_Setup.exe`.
+   
+   > **Note on Windows SmartScreen:** Because this is a new open-source tool, Windows Defender might show a "Windows protected your PC" warning when running the installer. Simply click **"More info"** and then **"Run anyway"** to proceed safely.
+
 2. **Run the Installer:**
    Follow the simple installation wizard to set up the application securely on your system.
 3. **Launch:**
