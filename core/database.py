@@ -57,6 +57,10 @@ def init_db():
             trigger_time TEXT NOT NULL,
             FOREIGN KEY(script_id) REFERENCES scripts(id) ON DELETE CASCADE
         );
+        CREATE TABLE IF NOT EXISTS settings (
+            key TEXT PRIMARY KEY,
+            value TEXT NOT NULL
+        );
     ''')
     
     # Try to add category column if it doesn't exist (for existing DBs)
@@ -64,6 +68,9 @@ def init_db():
         cursor.execute("ALTER TABLE scripts ADD COLUMN category TEXT DEFAULT 'Uncategorized'")
     except sqlite3.OperationalError:
         pass
+        
+    # Insert default first_run setting if it doesn't exist
+    cursor.execute("INSERT OR IGNORE INTO settings (key, value) VALUES ('first_run', 'true')")
         
     conn.commit()
     conn.close()
@@ -111,6 +118,21 @@ def delete_all_scripts():
     conn = get_connection()
     cursor = conn.cursor()
     cursor.execute("DELETE FROM scripts")
+    conn.commit()
+    conn.close()
+
+def get_setting(key, default_value=None):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT value FROM settings WHERE key = ?", (key,))
+    result = cursor.fetchone()
+    conn.close()
+    return result[0] if result else default_value
+
+def set_setting(key, value):
+    conn = get_connection()
+    cursor = conn.cursor()
+    cursor.execute("INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)", (key, value))
     conn.commit()
     conn.close()
 

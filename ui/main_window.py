@@ -7,6 +7,9 @@ from core.execution import ScriptExecutionThread
 from core.database import get_all_scripts, add_script, get_script, update_script, delete_script, delete_all_scripts
 from ui.new_script_dialog import NewScriptDialog
 from ui.collection_browser import CollectionBrowserDialog
+from ui.tour_guide import WelcomeWizardDialog
+from ui.learning_resources import LearningDialog
+from core.database import get_setting, set_setting
 
 
 class MainWindow(QMainWindow):
@@ -46,11 +49,15 @@ class MainWindow(QMainWindow):
         self.btn_import = QPushButton("Import")
         self.btn_delete = QPushButton("Delete")
         self.btn_delete_all = QPushButton("Delete All")
+        self.btn_learn = QPushButton("Learn / Help")
+        self.btn_learn.setStyleSheet("background-color: #238636; color: white;")
+        
         button_layout.addWidget(self.btn_new)
         button_layout.addWidget(self.btn_browse)
         button_layout.addWidget(self.btn_import)
         button_layout.addWidget(self.btn_delete)
         button_layout.addWidget(self.btn_delete_all)
+        button_layout.addWidget(self.btn_learn)
         left_layout.addLayout(button_layout)
 
         splitter.addWidget(left_panel)
@@ -131,6 +138,7 @@ class MainWindow(QMainWindow):
         self.btn_stop.clicked.connect(self.on_stop_script)
         self.btn_schedule.clicked.connect(self.on_schedule_script)
         self.btn_save.clicked.connect(self.on_save_script)
+        self.btn_learn.clicked.connect(self.on_learn_clicked)
         self.script_list.itemClicked.connect(self.on_script_selected)
 
         self.execution_thread = None
@@ -143,6 +151,18 @@ class MainWindow(QMainWindow):
         self.script_list.viewport().setAcceptDrops(False)
         
         self.load_scripts_to_list()
+        self.check_first_run()
+
+    def check_first_run(self):
+        first_run = get_setting('first_run', 'true')
+        if first_run == 'true':
+            dialog = WelcomeWizardDialog(self)
+            dialog.exec()
+            set_setting('first_run', 'false')
+
+    def on_learn_clicked(self):
+        dialog = LearningDialog(self)
+        dialog.exec()
         
     def load_scripts_to_list(self):
         self.script_list.clear()
